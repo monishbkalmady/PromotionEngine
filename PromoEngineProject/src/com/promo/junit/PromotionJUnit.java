@@ -12,7 +12,7 @@ class PromotionJUnit {
 	@Test
 	void sampleTest() {
 		ShoppingCartUtil cart = new ShoppingCartUtil(new Item("A", 2));
-		assertEquals(0.0, cart.getTotalPrice());
+		assertEquals(100.0, cart.getTotalPrice());
 	}
 
 }

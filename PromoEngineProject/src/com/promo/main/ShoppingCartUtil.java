@@ -9,7 +9,7 @@ public class ShoppingCartUtil {
 	}
 
 	public Double getTotalPrice() {
-		// TODO Auto-generated method stub
+		
 		return item.getItemPrice();
 	}
 

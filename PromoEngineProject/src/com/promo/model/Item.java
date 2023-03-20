@@ -4,7 +4,7 @@ public class Item {
 	private String name;
 	private int quantity;
 	
-	private int priceA = 50;
+	private double priceA = 50;
 	
 	public Item(String name, int quantity) {
 		this.name = name;
@@ -25,8 +25,7 @@ public class Item {
 	}
 
 	public Double getItemPrice() {
-		// TODO Auto-generated method stub
-		return 0.0;
+		return this.quantity * priceA;
 	}
 
 }
