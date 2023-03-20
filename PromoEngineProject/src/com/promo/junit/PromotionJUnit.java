@@ -8,7 +8,7 @@ class PromotionJUnit {
 
 	@Test
 	void sampleTest() {
-		fail("Not yet implemented");
+		assertEquals(0.0, 1.0);
 	}
 
 }
