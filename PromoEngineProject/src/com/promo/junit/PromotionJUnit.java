@@ -11,8 +11,8 @@ class PromotionJUnit {
 
 	@Test
 	void sampleTest() {
-		ShoppingCartUtil cart = new ShoppingCartUtil(new Item("A", 2));
-		assertEquals(100.0, cart.getTotalPrice());
+		ShoppingCartUtil cart = new ShoppingCartUtil(new Item("A", 2), new Item("B", 3), new Item("C", 1), new Item("D", 2));
+		assertEquals(240.0, cart.getTotalPrice());
 	}
 
 }

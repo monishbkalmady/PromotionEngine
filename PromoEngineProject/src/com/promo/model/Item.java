@@ -5,6 +5,9 @@ public class Item {
 	private int quantity;
 	
 	private double priceA = 50;
+	private double priceB = 30;
+	private double priceC = 20;
+	private double priceD = 15;
 	
 	public Item(String name, int quantity) {
 		this.name = name;
@@ -25,7 +28,24 @@ public class Item {
 	}
 
 	public Double getItemPrice() {
-		return this.quantity * priceA;
+		String name = this.name;
+		int quantity = this.quantity;
+		double totalPrice = 0.0;
+		switch(name) {
+		case "A":
+			totalPrice = quantity * priceA;
+			break;
+		case "B":
+			totalPrice = quantity * priceB;
+			break;
+		case "C":
+			totalPrice = quantity * priceC;
+			break;
+		case "D":
+			totalPrice = quantity * priceD;
+			break;
+		}
+		return totalPrice;
 	}
 
 }
