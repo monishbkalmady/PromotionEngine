@@ -14,5 +14,11 @@ class PromotionJUnit {
 		ShoppingCartUtil cart = new ShoppingCartUtil(new Item("A", 2), new Item("B", 3), new Item("C", 1), new Item("D", 2));
 		assertEquals(240.0, cart.getTotalPrice());
 	}
+	
+	@Test
+	void testScenario1() {
+		ShoppingCartUtil cart = new ShoppingCartUtil(new Item("A", 1), new Item("B", 1), new Item("C", 1), null);
+		assertEquals(100.0, cart.getTotalPrice());
+	}
 
 }

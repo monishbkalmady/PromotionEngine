@@ -4,6 +4,7 @@ public class Item {
 	private String name;
 	private int quantity;
 	
+	//Defining constants i.e, the price of each product
 	private double priceA = 50;
 	private double priceB = 30;
 	private double priceC = 20;

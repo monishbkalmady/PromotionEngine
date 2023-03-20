@@ -12,7 +12,21 @@ public class ShoppingCartUtil {
 	}
 
 	public Double getTotalPrice() {
-		double totalPrice = itemA.getItemPrice() + itemB.getItemPrice() + itemC.getItemPrice() + itemD.getItemPrice();
+		double totalPrice = 0.0;
+		// Adding null checks for every item object
+		if(itemA != null) {
+			totalPrice += itemA.getItemPrice();
+		}
+		if(itemB != null) {
+			totalPrice += itemB.getItemPrice();
+		}
+		if(itemC != null) {
+			totalPrice += itemC.getItemPrice();
+		}
+		if(itemD != null) {
+			totalPrice += itemD.getItemPrice();
+		}
+
 		return totalPrice;
 	}
 
