@@ -4,7 +4,7 @@ public class ShoppingCartUtil {
 
 	public Double getTotalPrice() {
 		// TODO Auto-generated method stub
-		return null;
+		return 0.0;
 	}
 
 }
