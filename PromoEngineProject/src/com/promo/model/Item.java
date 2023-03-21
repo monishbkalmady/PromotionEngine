@@ -40,6 +40,7 @@ public class Item {
 	/**
 	 * @author monish
 	 * Method to check and calculate promo benefits for an item
+	 * All the necessary calculations are made in this class where constants are defined
 	 * @return Item price after promotional benefits
 	 */
 	public Double getItemPrice() {
@@ -71,7 +72,12 @@ public class Item {
 		return totalPrice;
 	}
 	
-	// defining new method to provide promotional discount if items C and D are present
+	/**
+	 * @author monish
+	 * Defining new method to provide promotional discount if items C and D are present
+	 * @param itemD
+	 * @return total value after applying promotions for Item 'C' and 'D'
+	 */
 	public double getPromotionCD(Item itemD) {
 		double quantC = this.quantity;
 		double quantD = itemD.quantity;
