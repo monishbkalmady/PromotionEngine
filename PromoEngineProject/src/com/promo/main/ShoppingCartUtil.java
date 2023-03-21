@@ -13,26 +13,17 @@ public class ShoppingCartUtil {
 
 	public Double getTotalPrice() {
 		double totalPrice = 0.0;
-		// Adding null checks for every item object
-		if(itemA != null) {
-			totalPrice += itemA.getItemPrice();
-		}
-		if(itemB != null) {
-			totalPrice += itemB.getItemPrice();
-		}
+		// Restructuring the code 
+
+		totalPrice += itemA != null ? itemA.getItemPrice() : 0.0;
+		totalPrice += itemB != null ? itemB.getItemPrice() : 0.0;
+		
 		// check if both items are present to avail benefits
 		if(itemC != null && itemD != null) {
 			totalPrice += itemC.getPromotionCD(itemD);
 		} else {
-			if(itemC != null) {
-				totalPrice += itemC.getItemPrice();
-			}
-			if(itemD != null) {
-				totalPrice += itemD.getItemPrice();
-			}
-		}
-		if(itemD != null) {
-			totalPrice += itemD.getItemPrice();
+			totalPrice += itemC != null ? itemC.getItemPrice() : 0.0;
+			totalPrice += itemD != null ? itemD.getItemPrice() : 0.0;
 		}
 
 		return totalPrice;
