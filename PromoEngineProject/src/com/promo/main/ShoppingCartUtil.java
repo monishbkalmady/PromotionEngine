@@ -12,8 +12,11 @@ public class ShoppingCartUtil {
 		this.itemD = item4;
 	}
 	
-	/*
-	 * Returns total price after applying promotions to all the selected items
+	/**
+	 * @author monish
+	 * Method to perform null checks and call methods in the Item class to calculate individiual price
+	 * Calculations are made in Item class to maintain privacy of constant promo values and Item parameters 
+	 * @return total price after applying promotions to all the selected items
 	 */
 	public Double getTotalPrice() {
 		double totalPrice = 0.0;
