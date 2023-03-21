@@ -4,13 +4,17 @@ import com.promo.model.Item;
 
 public class ShoppingCartUtil {
 	private Item itemA, itemB, itemC, itemD;
+	
 	public ShoppingCartUtil(Item item1, Item item2, Item item3, Item item4) {
 		this.itemA = item1;
 		this.itemB = item2;
 		this.itemC = item3;
 		this.itemD = item4;
 	}
-
+	
+	/*
+	 * Returns total price after applying promotions to all the selected items
+	 */
 	public Double getTotalPrice() {
 		double totalPrice = 0.0;
 		// Restructuring the code 
