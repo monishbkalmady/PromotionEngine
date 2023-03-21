@@ -36,7 +36,12 @@ public class Item {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
+	
+	/**
+	 * @author monish
+	 * Method to check and calculate promo benefits for an item
+	 * @return Item price after promotional benefits
+	 */
 	public Double getItemPrice() {
 		String name = this.name;
 		int quantity = this.quantity;
