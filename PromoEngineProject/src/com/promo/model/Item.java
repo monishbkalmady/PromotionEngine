@@ -44,14 +44,14 @@ public class Item {
 		switch(name) {
 		case "A":
 			if(quantity >= promoQtyA) {
-				totalPrice = getPromotions();
+				totalPrice = (int)(quantity/promoQtyA)*promoPriceA + (quantity%promoQtyA)*priceA;
 			} else {
 				totalPrice = quantity * priceA;
 			}
 			break;
 		case "B":
 			if(quantity >= promoQtyB) {
-				totalPrice = getPromotions();
+				totalPrice = (int)(quantity/promoQtyB)*promoPriceB + (quantity%promoQtyB)*priceB;
 			} else {
 				totalPrice = quantity * priceB;
 			}
@@ -66,19 +66,7 @@ public class Item {
 		return totalPrice;
 	}
 	
-	private double getPromotions() {
-		double promoValue = 0.0;
-		switch(this.name) {
-		case "A":
-			promoValue = (int)(this.quantity/promoQtyA)*promoPriceA + (this.quantity%promoQtyA)*priceA;
-			break;
-		case "B":
-			promoValue = (int)(this.quantity/promoQtyB)*promoPriceB + (this.quantity%promoQtyB)*priceB;
-			break;
-		}
-		return promoValue;
-	}
-	
+	// defining new method to provide promotional discount if items C and D are present
 	public double getPromotionCD(Item itemD) {
 		double quantC = this.quantity;
 		double quantD = itemD.quantity;
