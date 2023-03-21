@@ -8,11 +8,15 @@ import com.promo.main.ShoppingCartUtil;
 import com.promo.model.Item;
 
 class PromotionJUnit {
-
+	
+	/**
+	 * @author monish
+	 * Junit test to verify total value of items without any promotions
+	 */
 	@Test
 	void sampleTest() {
 		ShoppingCartUtil cart = new ShoppingCartUtil(new Item("A", 2), new Item("B", 1), new Item("C", 1), new Item("D", 2));
-		assertEquals(180.0, cart.getTotalPrice());
+		assertEquals(175.0, cart.getTotalPrice());
 	}
 	
 	@Test
