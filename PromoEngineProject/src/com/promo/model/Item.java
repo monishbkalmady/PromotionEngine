@@ -24,19 +24,6 @@ public class Item {
 		this.quantity = quantity;
 	}
 	
-	public String getName() {
-		return name;
-	}
-	public int getQuantity() {
-		return quantity;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-	
 	/**
 	 * @author monish
 	 * Method to check and calculate promo benefits for an item
