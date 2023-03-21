@@ -78,5 +78,19 @@ public class Item {
 		}
 		return promoValue;
 	}
+	
+	public double getPromotionCD(Item itemD) {
+		double quantC = this.quantity;
+		double quantD = itemD.quantity;
+		double totalVal = 0.0;
+		if(quantC == quantD) {
+			totalVal = quantC * promoPriceCD;
+		} else if(quantC > quantD) {
+			totalVal = (quantD * promoPriceCD) + (quantC-quantD) * priceC;
+		} else {
+			totalVal = (quantC * promoPriceCD) + (quantD-quantC) * priceD;
+		}
+		return totalVal;
+	}
 
 }

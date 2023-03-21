@@ -20,8 +20,16 @@ public class ShoppingCartUtil {
 		if(itemB != null) {
 			totalPrice += itemB.getItemPrice();
 		}
-		if(itemC != null) {
-			totalPrice += itemC.getItemPrice();
+		// check if both items are present to avail benefits
+		if(itemC != null && itemD != null) {
+			totalPrice += itemC.getPromotionCD(itemD);
+		} else {
+			if(itemC != null) {
+				totalPrice += itemC.getItemPrice();
+			}
+			if(itemD != null) {
+				totalPrice += itemD.getItemPrice();
+			}
 		}
 		if(itemD != null) {
 			totalPrice += itemD.getItemPrice();
